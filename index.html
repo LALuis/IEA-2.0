@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Informaticos en Accion</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--Custom Styles-->
+    <link rel="stylesheet" type="text/css" href="./iea-style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+            <a class="navbar-brand ml-3 ml-lg-5 mr-auto" href="#">
+                <img src="./assets/iea_logo.png" height="30" alt="">
+            </a>
+
+            <button class="navbar-toggler mr-3 mr-lg-5" type="button" id="IEAToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <ul class="nav navbar-nav navbar-right mr-5 d-none d-lg-inline-flex">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">QUE HACEMOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">DIRECTORIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">QUE HACEMOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">GALERIA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="side-menu">
+        <nav class="nav-collapse bg-light" id="navBar">
+            <ul class="nav navbar-nav ml-2">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">QUE HACEMOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">DIRECTORIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">QUE HACEMOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">GALERIA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container-fluid text-center px-0 pt-5"
+        style="margin-top: 50px; background-color:black; color: white; min-height : 300px;">
+        <div class="w-100 text-center">
+            <h5>SOMOS INFORMATICOS EN ACCION</h5>
+            <p class="mt-1" style="font-size:12px">Acompañamos procesos comunitarios a travez de la tecnologia.</p>
+            <button class="btn btn-warning iea-button mt-3" type="button">
+                <i class="fa fa-plus"></i> SUMATE
+            </button>
+        </div>
+        <svg style="width:100%;">
+            <polygon points="0,150 1350,40 1350,150" style="fill:white;stroke:transparent;stroke-width:1" />
+        </svg>
+    </div>
+
+
+
+
+
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!--Popper-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        //Open side Menu
+
+        $(document).ready(function () {
+            $('#IEAToggler').on('click', function () {
+                if ($("#navBar").hasClass('collapsed')) {
+                    $("#navBar").removeClass('collapsed');
+                } else {
+                    $("#navBar").addClass('collapsed')
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

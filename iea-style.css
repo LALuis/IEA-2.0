@@ -1,0 +1,72 @@
+/*Variables globales*/
+:root {
+    --naranja-IEA: coral;
+    --fuente-IEA:  'Roboto', sans-serif;
+    --tamano-headers: 18px;
+    --tamano-headers-sm : 15px;
+    --tamano-texto: 15px;
+    --tamano-texto-sm: 13px;
+}
+
+html, body{
+    height: 100%;
+    font-family: var(--fuente-IEA);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 58px;
+}
+
+p{
+    font-size: var(--tamano-texto);
+}
+
+.side-menu {
+    position: fixed;
+    height: 100%;
+    z-index: 10;
+    top: 58px;
+    left: 0;
+}
+
+.side-menu .nav-collapse {
+    width: 227px;
+    height: 100%;
+    position: fixed;
+    left: -227px;
+    transition: all ease-out 0.5s;
+    opacity: 0.95;
+}
+
+.side-menu .collapsed {
+    left: 0;
+    transition: all ease-in 0.3s;
+}
+
+.iea-button {
+    color: white !important;
+    border-radius: 0;
+    background: rgba(255, 175, 75, 1);
+    background: -moz-linear-gradient(45deg, rgba(255, 175, 75, 1) 36%, rgba(255, 164, 49, 1) 49%, rgba(255, 146, 10, 1) 69%, rgba(255, 146, 10, 1) 81%);
+    background: -webkit-gradient(left bottom, right top, color-stop(36%, rgba(255, 175, 75, 1)), color-stop(49%, rgba(255, 164, 49, 1)), color-stop(69%, rgba(255, 146, 10, 1)), color-stop(81%, rgba(255, 146, 10, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(255, 175, 75, 1) 36%, rgba(255, 164, 49, 1) 49%, rgba(255, 146, 10, 1) 69%, rgba(255, 146, 10, 1) 81%);
+    background: -o-linear-gradient(45deg, rgba(255, 175, 75, 1) 36%, rgba(255, 164, 49, 1) 49%, rgba(255, 146, 10, 1) 69%, rgba(255, 146, 10, 1) 81%);
+    background: -ms-linear-gradient(45deg, rgba(255, 175, 75, 1) 36%, rgba(255, 164, 49, 1) 49%, rgba(255, 146, 10, 1) 69%, rgba(255, 146, 10, 1) 81%);
+    background: linear-gradient(45deg, rgba(255, 175, 75, 1) 36%, rgba(255, 164, 49, 1) 49%, rgba(255, 146, 10, 1) 69%, rgba(255, 146, 10, 1) 81%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1);
+}
+
+.iea-logo{
+    height: 30px;
+}
+
+/*A partir de resoluciones lg*/
+@media (min-width: 992px) {
+    p{
+        font-size: var(--tamano-texto);
+    }
+}
