@@ -55,7 +55,7 @@
         </nav>
     </header>
 
-    <div class="side-menu">
+    <div class="side-menu" style="z-index: 9999;">
         <nav class="nav-collapse bg-light" id="navBar">
             <ul class="nav navbar-nav ml-2">
                 <li class="nav-item active">
@@ -97,8 +97,8 @@
     </div>
 
 
-    <section class="h-50 h-lg-75 p-2 p-lg-5" style="background-color: white;">
-        <div class="row">
+    <section class="p-2 p-lg-5" style="background-color: white;">
+        <div class="row w-100 m-0">
             <div class="col-10 col-lg-3 mx-auto mt-3 mt-lg-0 quienes-somos-seccion">
                 <div class="que-hacemos-icono p-2">
                     <i class="fas fa-users"></i>
@@ -115,7 +115,7 @@
             </div>
             <div class="col-10 col-lg-3 mx-auto mt-3 mt-lg-0 quienes-somos-seccion">
                 <div class="que-hacemos-icono p-2">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-people-carry"></i>
                 </div>
                 <div class="que-hacemos-header">
                     Nuestra misión y visión
@@ -129,17 +129,73 @@
             </div>
             <div class="col-10 col-lg-3 mx-auto mt-3 mt-lg-0 quienes-somos-seccion">
                 <div class="que-hacemos-icono p-2">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-heart"></i>
                 </div>
                 <div class="que-hacemos-header">
                     ¿Cómo ayudarnos?
                 </div>
                 <div class="que-hacemos-texto p-2">
                     <strong>¡Seguinos!</strong> Si, solo siguiéndonos ya estas ayudándonos a llegar a mas gente.<br><br>
-                    <strong>¡Sumate!</strong> ¿Te gustaría ser voluntario? Buscamos jóvenes con ganas de generar 
+                    <strong>¡Sumate!</strong> ¿Te gustaría ser voluntario? Buscamos jóvenes con ganas de generar
                     un cambio en la sociedad y hacer buenos amigos. <br><br>
-                    <strong>¡Dona!</strong> Buscamos alimentos, útiles escolares y partes de computadoras. 
+                    <strong>¡Dona!</strong> Buscamos alimentos, útiles escolares y partes de computadoras.
                     Animate a escribirnos por cualquier consulta.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ******************************************************************************************************************   
+                                                        DIRECTORIO HACER DINAMICO
+
+                IDEA: (onClick) Cambiar clase d-none a d-block y el resto a d-none - Similar a como hice con el menu lateral
+         ******************************************************************************************************************** -->
+
+    <section class="pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 align-self-center directorio-img-box">
+                    <div class="img">
+                        <img class="directorio-img" src="./assets/imagenes/directorio/FERNANDA.jpeg"
+                            alt="Fernanda Sesto" id="director-imagen">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="directorio-texto-container mt-5 mt-lg-0">
+                        <h2 class="directorio-nombre" id="director-titulo">Fernanda</h2>
+                        <p class="pt-3 directorio-texto">
+                            <span class="directorio-subtitulo">Nombre completo: </span>
+                            <span id="director-nombre">Fernanda Sesto</span>
+                        </p>
+                        <p class="pt-3 directorio-texto">
+                            <span class="directorio-subtitulo">Trabaja en: </span>
+                            <span id="director-trabajo">Area de Testing</span>
+                        </p>
+                        <p class="pt-3 directorio-texto">
+                            <span class="directorio-subtitulo">Pasión: </span>
+                            <span id="director-pasion">El desarrollo comunitario y la resolución de problemas.</span>
+                        </p>
+                        <p class="pt-3 directorio-texto">
+                            <span class="directorio-subtitulo">Rol en IEA: </span>
+                            <span id="director-rol">Fundadora y Lider dentro del área de gestión.</span>
+                        </p>
+                        <p class="pt-3 directorio-texto">
+                            <span class="directorio-subtitulo">¿Por qué IEA? </span>
+                            <span id="director-porque">
+                                Porque quiero vivir en un mundo en donde todos tengamos
+                                acceso a las mismas oportunidades. La brecha digital
+                                tiene que terminar.
+                            </span>
+                        </p>
+                        <button class="btn btn-warning d-block d-lg-none" type="button" id="next-director-sm">
+                            SIGUIENTE <i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-1 align-self-center">
+                    <button class="btn btn-warning d-none d-lg-block" type="button" id="next-director">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -164,12 +220,69 @@
         //Open side Menu
 
         $(document).ready(function () {
+            var directorActual = 0;
+            var directores = [
+                {
+                    imagenPath: './assets/imagenes/directorio/FERNANDA.jpeg',
+                    titulo: 'Fernanda',
+                    nombre: 'Fernanda Sesto',
+                    trabaja: 'Area de Testing',
+                    pasion: 'El desarrollo comunitario y la resolución de problemas.',
+                    rol: 'Fundadora y Lider dentro del área de gestión.',
+                    porQueIEA: 'Porque quiero vivir en un mundo en donde todos tengamos acceso a las mismas oportunidades. La brecha digital tiene que terminar.',
+                },
+                {
+                    imagenPath: './assets/imagenes/directorio/GIMENA.jpeg',
+                    titulo: 'Gimena',
+                    nombre: 'Gimena Alamon',
+                    trabaja: 'Estudio Ingeniería y trabajo en una empresa de software.',
+                    pasion: 'Me gusta la tecnología y el poder enseñar a los demás.',
+                    rol: 'Lider en el área de contenidos.',
+                    porQueIEA: 'Porque es la oportunidad perfecta para hacer algo que nos llena, no siendo los únicos beneficiados, lo cual duplica la recompensa.',
+                },
+                {
+                    imagenPath: './assets/imagenes/directorio/PAULA.jpeg',
+                    titulo: 'Paula',
+                    nombre: 'Paula Arbelo',
+                    trabaja: '',
+                    pasion: '',
+                    rol: '',
+                    porQueIEA: '',
+                },
+                {
+                    imagenPath: './assets/imagenes/directorio/NICO.jpeg',
+                    titulo: 'Nicolas',
+                    nombre: 'Nicolas Colombo.',
+                    trabaja: 'Estudio Medicina y programacion',
+                    pasion: 'Aprender.',
+                    rol: ' Lider en el área de voluntariado.',
+                    porQueIEA: 'Porque disfruto ayudando a los demas.',
+                }];
+
+            //Menu Lateral, abrir y cerrar
             $('#IEAToggler').on('click', function () {
                 if ($("#navBar").hasClass('collapsed')) {
                     $("#navBar").removeClass('collapsed');
                 } else {
                     $("#navBar").addClass('collapsed')
                 }
+            });
+
+            //Cambio de director al hacer click en next pantallas 
+            $('#next-director, #next-director-sm').on('click', function () {
+                directorActual = directorActual + 1;
+
+                if (directorActual > 3) {
+                    directorActual = 0;
+                }
+
+                $("#director-imagen")[0].src = directores[directorActual].imagenPath;
+                $("#director-titulo")[0].innerHTML = directores[directorActual].titulo;
+                $("#director-nombre")[0].innerHTML = directores[directorActual].nombre;
+                $("#director-trabajo")[0].innerHTML = directores[directorActual].trabaja;
+                $("#director-pasion")[0].innerHTML = directores[directorActual].pasion;
+                $("#director-rol")[0].innerHTML = directores[directorActual].rol;
+                $("#director-porque")[0].innerHTML = directores[directorActual].porQueIEA;
             });
         });
     </script>
