@@ -177,6 +177,15 @@ p {
     height: 40px;
 }
 
+/* Modal */
+.modal-IEA{
+    background-color: var(--gris-IEA);
+}
+
+.modal-tab{
+    border-radius: 0 !important;
+}
+
 /*A partir de resoluciones lg*/
 
 @media (min-width: 1048px) {
